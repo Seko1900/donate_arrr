@@ -13,7 +13,7 @@ Step 1 - Stick these goodies between your <head> tags:
   <script src="donate_arrr.js"></script>
 ~~~~~
 Step 2 - wrap your favorite HTML element to make it into a donation flyout on hover:
-
-  `<a href="piratechain:YOUR-zADDRESS">☠️ DONATE ARRR</a>`
-
+~~~~~
+  <a href="piratechain:YOUR-zADDRESS">☠️ DONATE ARRR</a>
+~~~~~
 Step 3 - Profit! from sweet Pirate ARRR rewards from more generous Pirates!
