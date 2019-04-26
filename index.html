@@ -21,7 +21,17 @@
             border: whitesmoke solid 1px; 
             display: inline-block;
           }
+          #light_section { background-color: whitesmoke; color: black; }
+          .CodeMirror { height: auto; border: 1px solid #ddd; }
+          .CodeMirror.cm-s-default { width: 800px; height: 150px; margin: 0 auto; } 
+          .CodeMirror pre { padding-left: 7px; line-height: 1.25; }
     </style>
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <script src="lib/codemirror.js"></script>
+    <script src="mode/xml/xml.js"></script>
+    <script src="mode/javascript/javascript.js"></script>
+    <script src="mode/css/css.js"></script>
+    <script src="mode/htmlmixed/htmlmixed.js"></script>
     <script src="jquery.min.js"></script>
     <script src="jquery-qrcode.min.js"></script>
     <link rel="stylesheet" href="donate_arrr.css">
@@ -40,14 +50,36 @@
       <p><code>&lt;a href="piratechain:YOUR-zADDRESS"&gt;☠️ DONATE ARRR&lt;/a&gt;</code></p>
       <p>Here's how it looks like this in practice:</p>
     <h3>
-      <div id="donate_arrr_container">
+     <div id="donate_arrr_container">
           <a href="piratechain:zs1m00z9kx530qgvrgul39whjk2ugjt88m8247y78hhsahfrpxnzr50dhpa7mvh9f4j0pw2jwcysal">
             ☠️ DONATE ARRR</a>
       </div>
     </h3>
+    <div id="light_section">
     <p>You can wrap images too if you have some pirate arrrt you wish to display.</p>
-    <p><a href="piratechain:zs1m00z9kx530qgvrgul39whjk2ugjt88m8247y78hhsahfrpxnzr50dhpa7mvh9f4j0pw2jwcysal"><img src="donateARRR_small.png" /></a></p>
+    <p><a href="piratechain:zs1m00z9kx530qgvrgul39whjk2ugjt88m8247y78hhsahfrpxnzr50dhpa7mvh9f4j0pw2jwcysal"><img src="donate-pirate.png" width="150px" /></a></p>
+    </div>
     <p>Enjoy!</p>
     <p><a href="piratechain:zs1m00z9kx530qgvrgul39whjk2ugjt88m8247y78hhsahfrpxnzr50dhpa7mvh9f4j0pw2jwcysal"><img src="donateARRR.png" /></a></p>
+    <div id="light_section">
+      <p>Paste this chunk of code into your page if you dare!</p>
+      <form id="code_container"><textarea id="code_sample">
+<!-- Begin Pirate Donation Button -->
+<script src="https://dogracer.github.io/donate_arrr/jquery.min.js"></script>
+<script src="https://dogracer.github.io/donate_arrr/jquery-qrcode.min.js"></script>
+<script src="https://dogracer.github.io/donate_arrr/donate_arrr.js"></script>
+<style>.arrrdonate-bubble{position:relative;width:240px;padding:10px;background:#fff;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;border:#daa520 solid 1px;text-align:center;overflow-wrap:break-word}.arrrdonate-bubble:after{content:'';position:absolute;border-style:solid;border-width:10px 9px 0;border-color:#fff transparent;display:block;width:0;z-index:1;margin-left:-9px;bottom:-10px;left:50%}.arrrdonate-bubble:before{content:'';position:absolute;border-style:solid;border-width:10px 9px 0;border-color:#daa520 transparent;display:block;width:0;z-index:0;margin-left:-9px;bottom:-11px;left:50%}.arrrdonate-address{font-size:x-small;color:#666;padding:5px 0}.arrrdonate{position:relative}.arrrdonate-bubble{position:absolute;display:none} </style>
+<div id="ARRRbutton" style="text-align: center"><a href="piratechain:YOUR-zADDRESS"><img src="https://dogracer.github.io/donate_arrr/donate-pirate.png" width="150px" /></a></div>
+<!-- End Pirate Donation Button -->
+      </textarea></form>
+
+      <p>Thank you!</p>
+    </div>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("code_sample"), {
+          mode: "text/html",
+          lineNumbers: true
+        });
+    </script>
   </body>
 </html>
