@@ -3,7 +3,7 @@
 header('Content-type: application/javascript');
 
 // Set variables
-$str_ouptput;
+$str_output;
 
 // Get content of real javascript files
 $str_output = file_get_contents('https://seko1900.github.io/donate_arrr/jquery.min.js');
