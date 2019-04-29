@@ -6,9 +6,9 @@ header('Content-type: application/javascript');
 $str_ouptput;
 
 // Get content of real javascript files
-$str_output = file_get_contents('https://dogracer.github.io/donate_arrr/jquery.min.js');
-$str_output .= file_get_contents('https://dogracer.github.io/donate_arrr/jquery-qrcode.min.js');
-$str_output .= file_get_contents('https://dogracer.github.io/donate_arrr/donate_arrr.js');
+$str_output = file_get_contents('https://seko1900.github.io/donate_arrr/jquery.min.js');
+$str_output .= file_get_contents('https://seko1900.github.io/donate_arrr/jquery-qrcode.min.js');
+$str_output .= file_get_contents('https://seko1900.github.io/donate_arrr/donate_arrr.js');
 
 // Remove single line comments
 $str_output = preg_replace('#//.*#', '', $str_output);
